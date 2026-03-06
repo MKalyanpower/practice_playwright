@@ -1,0 +1,17 @@
+{
+  "name": "playwright_tool",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "youtube":"npx playwright test --project=chromium --headed",
+    "Retry":"npx playwright test --retries=3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.2"
+  }
+}
