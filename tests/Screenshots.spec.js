@@ -1,5 +1,10 @@
 import { test, expect } from '@playwright/test';
 
+
+/*chromium.launch() → open browser
+browser.newContext() → create session
+context.newPage() → open tab */ 
+
 test('take screenshot', async ({ page }) => {
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     //element screenshot

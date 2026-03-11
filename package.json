@@ -4,7 +4,13 @@
   "main": "index.js",
   "scripts": {
     "youtube":"npx playwright test --project=chromium --headed",
-    "Retry":"npx playwright test --retries=3"
+    "Retry":"npx playwright test --retries=3",
+    "KeyboardAction":"npx playwright test KeyboardActions.spec.js --project=chromium --headed",
+    "MouseAction":"npx playwright test MouseAction.spec.js --project=chromium --headed",
+    "Iframe":"npx playwright test Iframes.spec.js --project=chromium --headed",
+    "Hooks":" npx playwright test Hooks.spec.js --project=chromium --headed",
+    "Dropdownlist":" npx playwright test DropdownList.spec.js --project=chromium --headed",
+    "Screenshot":" npx playwright test Screenshots.spec.js --project=chromium --headed"
   },
   "keywords": [],
   "author": "",
