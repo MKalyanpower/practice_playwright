@@ -10,7 +10,8 @@
     "Iframe":"npx playwright test Iframes.spec.js --project=chromium --headed",
     "Hooks":" npx playwright test Hooks.spec.js --project=chromium --headed",
     "Dropdownlist":" npx playwright test DropdownList.spec.js --project=chromium --headed",
-    "Screenshot":" npx playwright test Screenshots.spec.js --project=chromium --headed"
+    "Screenshot":" npx playwright test Screenshots.spec.js --project=chromium --headed",
+    "DatePickers":"npx playwright test DatePickers.spec.js --project=chromium --headed"
   },
   "keywords": [],
   "author": "",

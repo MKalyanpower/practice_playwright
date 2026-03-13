@@ -1,7 +1,7 @@
 import { test, chromium } from '@playwright/test';
 
 test('Mouse Actions', async ({page}) => {
-
+await console.log("Mouse Actions is runnning");
 await page.goto("https://www.demoblaze.com/");
 
 // await page.waitForTimeout(5000);
