@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test"
-import {highlightAndScreenshot } from '../Utils/ScreenshotUtils';
+import { highlightAndScreenshot } from '../Utils/ScreenshotUtils';
 test('Datepickers handling', async ({ page }) => {
     await page.goto('https://www.hyrtutorials.com/p/calendar-practice.html');
     // await page.locator("#first_date_picker").fill('12/02/2025');
@@ -14,14 +14,14 @@ test('Datepickers handling', async ({ page }) => {
     const defaultDateAnchor = await page.locator('.ui-datepicker-today > a');
 
     // 2. Get the text inside the <a> (this gives "12" in your screenshot)
-    let defaultDateValue = await defaultDateAnchor.textContent();
+    let defaultDateValue = await defaultDateAnchor.textContent();//here we also use getAttribute() if we have proper locator like 'data-date'
     console.log('Default Date Text:', defaultDateValue);
     const custom_date = parseInt(defaultDateValue) + 3;
 
     console.log("Custom Date:", custom_date);
 
     // Create dynamic locator
- const dateElement = page.locator(`//a[text()='${custom_date.toString()}']`);
+    const dateElement = page.locator(`//a[text()='${custom_date.toString()}']`);//same with 'data-date'
     await dateElement.click();
 
 
@@ -32,7 +32,7 @@ test('Datepickers handling', async ({ page }) => {
     //console.log('Default Date Attribute:', defaultDataAttr);
 
 
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(6000);
 
 
 

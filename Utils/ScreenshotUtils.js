@@ -1,11 +1,16 @@
-export async function highlightAndScreenshot(locator, name) {
-    const timestamp = Date.now();
+export async function takeScreenshot(page, testName) {
 
-    await locator.evaluate((el) => {
-        el.style.border = "3px solid red";
+    const timestamp = new Date()
+        .toISOString()
+        .replace(/[:.]/g, "-");
+
+    const filePath = `Screenshots/${testName}-${timestamp}.png`;
+
+    await page.screenshot({
+        path: filePath,
+        fullPage: true
     });
 
-    await locator.screenshot({
-        path: `./screenshots/${name}_${timestamp}.png`
-    });
+    console.log(`Screenshot saved at: ${filePath}`);
+
 }
